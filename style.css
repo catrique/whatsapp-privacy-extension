@@ -1,0 +1,141 @@
+html.privacy-enabled [data-testid="msg-container"] [data-testid="selectable-text"],
+html.privacy-enabled [data-testid="msg-container"] .selectable-text,
+html.privacy-enabled [data-testid="msg-container"] [dir="auto"],
+/* html.privacy-enabled [data-testid="last-msg-status"] [dir="auto"],
+html.privacy-enabled [data-testid="last-msg-status"] > span:not([data-icon]), */
+/* html.privacy-enabled [data-testid="cell-frame-title"] [dir="auto"],
+html.privacy-enabled [data-testid="cell-frame-title"] > span:not([data-icon]), */
+html.privacy-enabled [data-testid="sticker-container"],
+html.privacy-enabled [data-testid="cell-frame-container"],
+html.privacy-enabled [data-testid="cell-frame-label"],
+html.privacy-enabled [data-testid="msg-container"],
+/* html.privacy-enabled [data-testid="cell-frame-secondary"], */
+html.privacy-enabled [data-testid="conversation-info-header"],
+html.privacy-enabled [data-testid="forwarded-header"] span,
+html.privacy-enabled [data-testid="link-preview-container"] img,
+html.privacy-enabled [data-testid="link-preview-container"] video,
+html.privacy-enabled [data-testid="media-url-provider"] img,
+html.privacy-enabled [data-testid="media-url-provider"] video {
+  filter: blur(10px);
+  transition: filter 0.15s ease;
+}
+
+html.privacy-enabled [data-testid="msg-container"]:hover [data-testid="selectable-text"],
+html.privacy-enabled [data-testid="msg-container"]:hover .selectable-text,
+html.privacy-enabled [data-testid="msg-container"]:hover [dir="auto"],
+/* html.privacy-enabled [data-testid="last-msg-status"]:hover [dir="auto"],
+html.privacy-enabled [data-testid="last-msg-status"]:hover > span:not([data-icon]), */
+/* html.privacy-enabled [data-testid="cell-frame-title"]:hover [dir="auto"],
+html.privacy-enabled [data-testid="cell-frame-title"]:hover > span:not([data-icon]), */
+html.privacy-enabled [data-testid="sticker-container"]:hover,
+html.privacy-enabled [data-testid="cell-frame-container"]:hover,
+html.privacy-enabled [data-testid="cell-frame-label"]:hover,
+html.privacy-enabled [data-testid="msg-container"]:hover,
+/* html.privacy-enabled [data-testid="cell-frame-secondary"]:hover, */
+html.privacy-enabled [data-testid="conversation-info-header"]:hover,
+html.privacy-enabled [data-testid="forwarded-header"]:hover span,
+html.privacy-enabled [data-testid="link-preview-container"]:hover img,
+html.privacy-enabled [data-testid="link-preview-container"]:hover video,
+html.privacy-enabled [data-testid="media-url-provider"]:hover img,
+html.privacy-enabled [data-testid="media-url-provider"]:hover video {
+  filter: none;
+}
+
+html.privacy-sidebar-collapsed
+  div:has(> header[data-testid="chatlist-header"]):has(> #side),
+html.privacy-sidebar-collapsed [data-testid="drawer-left"],
+html.privacy-sidebar-collapsed [data-testid="chatlist-header"],
+html.privacy-sidebar-collapsed #side {
+  display: none !important;
+}
+
+html.privacy-sidebar-collapsed [data-testid="conversation-panel-wrapper"],
+html.privacy-sidebar-collapsed #main {
+  flex: 1 1 100% !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: none !important;
+}
+
+.privacy-sidebar-toggle {
+  position: fixed;
+  top: 50%;
+  left: 8px;
+  z-index: 2147483646;
+  display: grid;
+  width: 34px;
+  height: 42px;
+  padding: 0;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 10px;
+  background: rgba(31, 41, 55, 0.92);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+  color: #fff;
+  cursor: pointer;
+  font-size: 28px;
+  line-height: 1;
+  transform: translateY(-50%);
+  transition:
+    background-color 0.15s ease,
+    transform 0.15s ease;
+}
+
+.privacy-sidebar-toggle:hover {
+  background: #1f8f65;
+  transform: translateY(-50%) scale(1.05);
+}
+
+.privacy-sidebar-toggle:focus-visible,
+.privacy-menu-button:focus-visible {
+  outline: 2px solid #65d6a5;
+  outline-offset: 2px;
+}
+
+.privacy-extension-controls {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 2147483646;
+  color: #e9edef;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.privacy-menu-button {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 50%;
+  background: #374151;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.28);
+  color: #fff;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 700;
+  transition:
+    background-color 0.15s ease,
+    transform 0.15s ease;
+}
+
+.privacy-menu-button:hover,
+.privacy-menu-button.privacy-is-enabled {
+  background: #1f8f65;
+}
+
+.privacy-menu-button:hover {
+  transform: scale(1.06);
+}
+
+@media (max-width: 640px) {
+  .privacy-extension-controls {
+    right: 12px;
+    bottom: 12px;
+  }
+
+  .privacy-sidebar-toggle {
+    left: 4px;
+  }
+}
