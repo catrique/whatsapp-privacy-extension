@@ -95,7 +95,7 @@ html.privacy-sidebar-collapsed #main {
 .privacy-extension-controls {
   position: fixed;
   right: 18px;
-  bottom: 18px;
+  bottom: 30px;
   z-index: 2147483646;
   color: #e9edef;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -132,7 +132,7 @@ html.privacy-sidebar-collapsed #main {
 @media (max-width: 640px) {
   .privacy-extension-controls {
     right: 12px;
-    bottom: 12px;
+    bottom: 22px;
   }
 
   .privacy-sidebar-toggle {
